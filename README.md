@@ -2,6 +2,8 @@
 
 A Flask-based web application designed to help users manage their personal finances with ease. Users can register, log in, track income and expenses, set budgets, and visualize spending patterns with interactive charts. The app integrates real-time currency conversion using ExchangeRate-API and is deployed on Render for public access, making it a robust, user-friendly tool for financial management.
 
+## Live URL: (https://personal-finance-tracker-94v0.onrender.com)
+
 ## Features
 
 - **User Authentication**: Secure registration and login system to manage personalized financial data.
@@ -46,4 +48,4 @@ Set monthly budgets for specific categories to manage spending.
 
 View transactions, budgets, total spending in USD, and a spending breakdown chart.
 
-![Dashboard](screenshots/Screenshot 2025-04-20 133831.png)
+![Dashboard](screenshots/dashboard.png)
