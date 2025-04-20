@@ -46,4 +46,4 @@ Set monthly budgets for specific categories to manage spending.
 
 View transactions, budgets, total spending in USD, and a spending breakdown chart.
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Screenshot 2025-04-20 133831.png)
