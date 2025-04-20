@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+    <h2 class="text-xl font-semibold mb-2">Total Spending (USD)</h2>
+    <p class="text-gray-600 mb-4">${{ total_spending | round(2) }}</p>
+    
+    <h2 class="text-xl font-semibold mb-2">Transactions</h2>
+    <table class="w-full border-collapse mb-6">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="border p-2">Type</th>
+                <th class="border p-2">Category</th>
+                <th class="border p-2">Amount</th>
+                <th class="border p-2">Currency</th>
+                <th class="border p-2">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td class="border p-2">{{ transaction['type'] }}</td>
+                <td class="border p-2">{{ transaction['category'] }}</td>
+                <td class="border p-2">{{ transaction['amount'] }}</td>
+                <td class="border p-2">{{ transaction['currency'] }}</td>
+                <td class="border p-2">{{ transaction['date'] }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5" class="border p-2 text-center">No transactions found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h2 class="text-xl font-semibold mb-2">Budgets</h2>
+    <table class="w-full border-collapse mb-6">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="border p-2">Category</th>
+                <th class="border p-2">Amount</th>
+                <th class="border p-2">Month</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for budget in budgets %}
+            <tr>
+                <td class="border p-2">{{ budget['category'] }}</td>
+                <td class="border p-2">{{ budget['amount'] }}</td>
+                <td class="border p-2">{{ budget['month'] }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="3" class="border p-2 text-center">No budgets set.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h2 class="text-xl font-semibold mb-2">Spending by Category</h2>
+    <div class="bg-white p-4 rounded shadow">
+        {{ plot_html | safe }}
+    </div>
+{% endblock %}

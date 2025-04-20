@@ -1,0 +1,58 @@
+2025-04-20 09:31:03,858 - __main__ - INFO - Starting Flask application
+2025-04-20 09:31:03,919 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+2025-04-20 09:31:03,919 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 09:31:17,683 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:31:17] "GET / HTTP/1.1" 200 -
+2025-04-20 09:31:18,122 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:31:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 09:31:25,334 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:31:25] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:31:58,233 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:31:58] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 09:31:58,332 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:31:58] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:32:10,708 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:32:10] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:34:05,177 - __main__ - INFO - Starting Flask application
+2025-04-20 09:34:05,194 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+2025-04-20 09:34:05,194 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 09:34:11,852 - werkzeug - INFO - 192.168.1.17 - - [20/Apr/2025 09:34:11] "GET / HTTP/1.1" 200 -
+2025-04-20 09:34:12,120 - werkzeug - INFO - 192.168.1.17 - - [20/Apr/2025 09:34:12] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 09:34:18,274 - werkzeug - INFO - 192.168.1.17 - - [20/Apr/2025 09:34:18] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 09:34:48,983 - werkzeug - INFO - 192.168.1.17 - - [20/Apr/2025 09:34:48] "[32mPOST /set_budget HTTP/1.1[0m" 302 -
+2025-04-20 09:34:49,052 - werkzeug - INFO - 192.168.1.17 - - [20/Apr/2025 09:34:49] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:37:28,248 - __main__ - INFO - Starting Flask application
+2025-04-20 09:37:28,264 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+2025-04-20 09:37:28,265 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 09:37:32,034 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:37:32] "GET / HTTP/1.1" 200 -
+2025-04-20 09:37:32,185 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:37:32] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 09:37:52,159 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:37:52] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:38:15,207 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:38:15] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 09:38:15,253 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:38:15] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:48:04,909 - __main__ - INFO - Starting Flask application
+2025-04-20 09:48:04,934 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+2025-04-20 09:48:04,935 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 09:48:14,312 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:48:14] "GET / HTTP/1.1" 200 -
+2025-04-20 09:48:18,915 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:48:18] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:48:36,198 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:48:36] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 09:48:39,919 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:48:39] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:48:55,481 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:48:55] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:49:13,656 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:49:13] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 09:49:20,770 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:49:20] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:49:51,811 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:49:51] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 09:49:51,937 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:49:51] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:50:01,878 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:50:01] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:50:32,618 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:50:32] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 09:50:32,770 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:50:32] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:50:54,791 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:50:54] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 09:50:56,051 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:50:56] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 09:50:57,546 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:50:57] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:51:04,762 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:51:04] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 09:51:44,845 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:51:44] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 09:51:46,164 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:51:46] "GET /dashboard HTTP/1.1" 200 -
