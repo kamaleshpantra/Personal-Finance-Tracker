@@ -56,3 +56,85 @@
 2025-04-20 09:51:04,762 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:51:04] "GET /set_budget HTTP/1.1" 200 -
 2025-04-20 09:51:44,845 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:51:44] "GET /add_transaction HTTP/1.1" 200 -
 2025-04-20 09:51:46,164 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 09:51:46] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 12:23:17,083 - __main__ - INFO - Starting Flask application
+2025-04-20 12:23:17,108 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+2025-04-20 12:23:17,108 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 12:23:22,610 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:23:22] "GET / HTTP/1.1" 200 -
+2025-04-20 12:23:25,893 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:23:25] "GET /register HTTP/1.1" 200 -
+2025-04-20 12:23:53,572 - app - ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\wtforms\validators.py", line 401, in __call__
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\app\routes.py", line 30, in register
+    if form.validate_on_submit():
+       ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\wtforms\form.py", line 330, in validate
+    return super().validate(extra)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\wtforms\form.py", line 147, in validate
+    if not field.validate(self, extra):
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\wtforms\fields\core.py", line 234, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\wtforms\fields\core.py", line 254, in _run_validation_chain
+    validator(form, self)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\91798\OneDrive\Desktop\finance tracker\Personal-Finance-Tracker\myenv\Lib\site-packages\wtforms\validators.py", line 403, in __call__
+    raise Exception(
+        "Install 'email_validator' for email validation support."
+    ) from exc
+Exception: Install 'email_validator' for email validation support.
+2025-04-20 12:23:53,617 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:23:53] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2025-04-20 12:25:59,523 - __main__ - INFO - Starting Flask application
+2025-04-20 12:25:59,542 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+2025-04-20 12:25:59,543 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 12:26:03,440 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:03] "GET / HTTP/1.1" 200 -
+2025-04-20 12:26:06,430 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:06] "GET /register HTTP/1.1" 200 -
+2025-04-20 12:26:23,129 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:23] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-04-20 12:26:23,146 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:23] "GET /login HTTP/1.1" 200 -
+2025-04-20 12:26:35,934 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-04-20 12:26:35,961 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:35] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 12:26:42,352 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:26:42] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 12:27:10,163 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:10] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 12:27:11,801 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:11] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 12:27:17,021 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:17] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 12:27:20,811 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:20] "GET /add_transaction HTTP/1.1" 200 -
+2025-04-20 12:27:39,777 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:39] "[32mPOST /add_transaction HTTP/1.1[0m" 302 -
+2025-04-20 12:27:39,849 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:39] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 12:27:48,306 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:48] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 12:27:57,380 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:27:57] "POST /set_budget HTTP/1.1" 200 -
+2025-04-20 12:28:01,690 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:01] "POST /set_budget HTTP/1.1" 200 -
+2025-04-20 12:28:03,307 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:03] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 12:28:06,124 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:06] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 12:28:10,983 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:10] "GET /set_budget HTTP/1.1" 200 -
+2025-04-20 12:28:20,012 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:20] "[32mPOST /set_budget HTTP/1.1[0m" 302 -
+2025-04-20 12:28:20,105 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:20] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 12:28:30,079 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:30] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-04-20 12:28:30,086 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:30] "GET / HTTP/1.1" 200 -
+2025-04-20 12:28:33,077 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:33] "GET /login HTTP/1.1" 200 -
+2025-04-20 12:28:39,750 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:39] "POST /login HTTP/1.1" 200 -
+2025-04-20 12:28:46,625 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:46] "GET /register HTTP/1.1" 200 -
+2025-04-20 12:28:49,811 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2025 12:28:49] "GET /login HTTP/1.1" 200 -

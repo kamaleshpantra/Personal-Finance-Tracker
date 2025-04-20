@@ -2,5 +2,13 @@
 
 {% block content %}
     <h1 class="text-3xl font-bold mb-4">Welcome to Personal Finance Tracker</h1>
-    <p class="text-gray-600">Manage your income, expenses, and budgets with ease. Visualize your spending and convert currencies in real-time.</p>
+    <p class="text-gray-600">
+        {% if current_user.is_authenticated %}
+            Manage your income, expenses, and budgets with ease. View your dashboard to track spending and convert currencies in real-time.
+            <a href="{{ url_for('dashboard') }}" class="text-blue-600">Go to Dashboard</a>
+        {% else %}
+            Sign up or log in to manage your personal finances, track spending, set budgets, and convert currencies in real-time.
+            <a href="{{ url_for('register') }}" class="text-blue-600">Get Started</a>
+        {% endif %}
+    </p>
 {% endblock %}

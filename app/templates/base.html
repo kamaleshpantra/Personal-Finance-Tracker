@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Finance Tracker</title>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
 <body class="bg-gray-100">
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between">
             <a href="{{ url_for('index') }}" class="text-white font-bold">Finance Tracker</a>
             <div>
-                <a href="{{ url_for('add_transaction') }}" class="text-white mx-2">Add Transaction</a>
-                <a href="{{ url_for('set_budget') }}" class="text-white mx-2">Set Budget</a>
-                <a href="{{ url_for('dashboard') }}" class="text-white mx-2">Dashboard</a>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('add_transaction') }}" class="text-white mx-2">Add Transaction</a>
+                    <a href="{{ url_for('set_budget') }}" class="text-white mx-2">Set Budget</a>
+                    <a href="{{ url_for('dashboard') }}" class="text-white mx-2">Dashboard</a>
+                    <a href="{{ url_for('logout') }}" class="text-white mx-2">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="text-white mx-2">Login</a>
+                    <a href="{{ url_for('register') }}" class="text-white mx-2">Register</a>
+                {% endif %}
             </div>
         </div>
     </nav>
@@ -22,7 +28,7 @@
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
-                    <div class="bg-{{ 'green' if category == 'success' else 'red' }}-100 border-{{ 'green' if category == 'success' else 'red' }}-400 text-{{ 'green' if category == 'success' else 'red' }}-700 px-4 py-3 rounded mb-4">
+                    <div class="bg-{{ 'green' if category in ['success', 'info'] else 'red' }}-100 border-{{ 'green' if category in ['success', 'info'] else 'red' }}-400 text-{{ 'green' if category in ['success', 'info'] else 'red' }}-700 px-4 py-3 rounded mb-4">
                         {{ message }}
                     </div>
                 {% endfor %}
